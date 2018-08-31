@@ -17,7 +17,17 @@ class ImportStatic {
 		data.forEach(item => {
 			arr.push(`${dirPath}/${item}`)
 		})
-		this.translateToBase64(arr)
+		
+		// 区分图片|图标，默认1M
+		this.translateImg(arr)
+		// this.translateToBase64(arr)
+	}
+
+	translateImg(arr = []) {
+		arr.forEach((item, index) => {
+			// to do - 区分图片|图标
+			
+		})
 	}
 
 	translateToBase64(arr = []) {
