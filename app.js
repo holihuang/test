@@ -13,8 +13,8 @@ const uuidV1 = require('uuid/v1')
 class ImportStatic {
 	constructor(...args) {
 		this.basePath = args[0]
-		const { NODE_ENV = 'dev' } = args[1]
-		this.env = NODE_ENV
+		const { mode = 'dev' } = args[1]
+		this.env = mode
 		this.limitSize = args[2] || 1024 * 1024  //接收格式：string，默认：number, 1M 
 		this.imgInfo = {}
 		this.read()
