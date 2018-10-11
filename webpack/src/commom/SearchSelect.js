@@ -159,6 +159,7 @@ class SearchSelect extends React.Component {
             const liProps = {
                 value: value,
                 title: label,
+                key: index,
                 'data-index': index,
                 'data-li': 'li',
                 style: {

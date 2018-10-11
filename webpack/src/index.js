@@ -1,21 +1,39 @@
+import 'babel-polyfill'
 import React from 'react'
-import ReactDOM from "react-dom"
-// import App from './components/demo/App'
-import SearchSelect from './commom/SearchSelect'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose, combineReducers  } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import { hashHistory } from 'react-router'
+import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
 
-import style from "./index.css"
+import AppRouter from './router'
+import global from './commom/global'
+import reducers from './reducers/index'
+import sagas from './sagas/index'
 
-const searchProps = {
-    list: [{
-        label: 'label1',
-        value: 1,
-    }, {
-        label: 'label2',
-        value: 2,
-    }, {
-        label: 'label3',
-        value: 3,
-    }]
-}
+// saga
+const sagaMiddleware = [createSagaMiddleware()]
+const enhancer = compose(applyMiddleware(...sagaMiddleware))
 
-ReactDOM.render(<SearchSelect {...searchProps} />, document.getElementById("app"))
+// 初始化 store
+const initialState = {}
+const store = createStore(
+    combineReducers({ ...reducers, routing }),
+    initialState,
+    enhancer,
+)
+
+// 执行saga
+sagaMiddleware[0].run(sagas)
+global.store = store
+
+// render
+const history = syncHistoryWithStore(hashHistory, store)
+const root = document.getElementById('app')
+ReactDOM.render(
+    <Provider store={store}>
+        <AppRouter history={history} />
+    </Provider>
+    , root
+)
