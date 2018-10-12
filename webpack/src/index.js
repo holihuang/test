@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose, combineReducers  } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { hashHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
+import { AppContainer } from 'react-hot-loader'
 
 import AppRouter from './router'
 import global from './commom/global'
@@ -37,3 +38,18 @@ ReactDOM.render(
     </Provider>
     , root
 )
+
+// 热替换
+if (module.hot) {
+    module.hot.accept('./router.js', () => {
+        const AppRouter2 = require('./router.js').default
+        ReactDOM.render(
+            <AppContainer>
+                <Provider store={store}>
+                    <AppRouter2 history={history} />
+                </Provider>
+            </AppContainer>
+            , root
+        )
+    })
+}

@@ -1,5 +1,7 @@
+const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 const path = require('path')
 
 module.exports = {
@@ -37,6 +39,11 @@ module.exports = {
             }
         ]
     },
+    devtool: "inline-source-map",
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",
@@ -45,6 +52,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
+        }),
+        new webpack.HotModuleReplacementPlugin(),  //热替换
+        new CleanWebpackPlugin('dist/*.*', {
+            root: __dirname,
+            verbose: true,
+            dry: false
         })
     ]
 }

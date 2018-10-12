@@ -1,10 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
+import Demo from '../components/ui/Index';
 
 function Index(props) {
+
+    const demoProps = {
+
+    }
+
     return (
-        <div>hello world</div>
+        <div>
+            hello world
+            <Demo { ...demoProps } />
+        </div>
     )
 }
 
