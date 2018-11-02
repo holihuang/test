@@ -2,14 +2,11 @@ const dbUtils = require('../utils/db-util')
 
 const user = {
     async getUser() {
-        let result = await dbUtils.select('user_info', ['id', 'email', 'name', 'detail_info'])
-        console.log(result, 'result')
-        if (Array.isArray(result) && result.length > 0) {
-            result = result[0]
-        } else {
-            result = null
-        }
-        return result
+    	const _sql = `select id, email, name, create_time from user_info`
+        return await dbUtils.query(_sql) || []
+    },
+    async getPartInfo() {
+
     }
 }
 

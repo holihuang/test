@@ -5,7 +5,7 @@ const db = cfg.database
 
 const pool = mysql.createPool({
     host: db.host,
-    user: db.user,
+    user: db.username,
     database: db.database,
     password: db.password
 })
@@ -29,11 +29,6 @@ const query = function (sql, values) {
     })
 }
 
-const select = function(table, keys) {
-    const _sql = `select ?? from ?? `
-    return query(_sql, [keys, table])
-}
-
 module.exports = {
-    select
+    query
 }
