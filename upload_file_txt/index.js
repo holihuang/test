@@ -31,7 +31,7 @@ var connection = mysql.createConnection({
  
 connection.connect();
  
-var  addSql = 'INSERT INTO info(name,age, date) VALUES ?';
+var  addSql = 'INSERT INTO info(code, name,age, date) VALUES ?';
 
 var addSqlParams = data
 
