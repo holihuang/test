@@ -1,0 +1,11 @@
+{
+  "name": "input",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "mysql": "^2.16.0",
+    "node-xlsx": "^0.12.1"
+  }
+}
