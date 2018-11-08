@@ -26,12 +26,12 @@ var connection = mysql.createConnection({
   user     : 'root',              
   password : '123456',       
   port: '3306',                   
-  database: 'user' 
+  database: 'trade' 
 }); 
  
 connection.connect();
  
-var  addSql = 'INSERT INTO info(code, name,age, date) VALUES ?';
+var  addSql = 'INSERT INTO stock(code, name, date) VALUES ?';
 
 var addSqlParams = data
 
