@@ -29,6 +29,11 @@ const query = function (sql, values) {
     })
 }
 
+const add = function (sql, arr) {
+    return query(sql, arr)
+}
+
 module.exports = {
-    query
+    query,
+    add
 }

@@ -10,7 +10,7 @@ function Index(props) {
     }
 
     return (
-        <div>
+        <div style={{ padding: '30px' }}>
             hello world
             <App {...appProps} />
         </div>

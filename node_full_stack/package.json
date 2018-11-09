@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start_server": "node ./server/app.js",
+    "start_server": "pm2 start ./server/app.js --watch",
+    "del_server": "pm2 delete ./server/app.js",
     "start": "webpack-dev-server --mode development --open"
   },
   "dependencies": {

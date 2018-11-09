@@ -12,33 +12,56 @@ class App extends React.Component {
         }
     }
 
-    handleClick = async () => {
-        // const opt = {}
-        // const result = await Request.post({
-        //     url: 'http://localhost:3000/api/btn/btnJson.json',
-        //     data: opt,
-        // })
-        //
-        // const { data } = result
-        //
-        // this.setState({
-        //     list: data
-        // })
-        console.log(this.props, 'props')
-        const { dispatch } = this.props
-        dispatch({
-            type: Constants.ON_GET_INFO_LIST_REQUESTED,
-            payload: {
-                params: {}
-            }
+    query = async () => {
+        const opt = {}
+        const result = await Request.post({
+            url: 'http://localhost:3000/api/btn/btnJson.json',
+            data: opt,
         })
+
+        const { data } = result
+
+        this.setState({
+            list: data
+        })
+    }
+
+    add = async () => {
+        const opt = {}
+        const { data } = await Request.post({
+            url: 'http://localhost:3000/api/btn/add.json',
+            data: opt,
+        })
+        return data
+    }
+
+    handleAddClick = async () => {
+        const isAdded = await this.add()
+        if (isAdded) {
+            this.query()
+        }
+    }
+
+    handleClick = async () => {
+        this.query()
+        // console.log(this.props, 'props')
+        // const { dispatch } = this.props
+        // dispatch({
+        //     type: Constants.ON_GET_INFO_LIST_REQUESTED,
+        //     payload: {
+        //         params: {}
+        //     }
+        // })
     }
 
     render() {
         const { list } = this.state
-console.log(this.props, 'app_props')
         const btnProps = {
             onClick: this.handleClick,
+        }
+
+        const addBtnProps = {
+            onClick: this.handleAddClick,
         }
 
         const tableProps = {
@@ -64,7 +87,10 @@ console.log(this.props, 'app_props')
 
         return (
             <div>
-                <Button {...btnProps}>点击一下</Button>
+                <div>
+                    <Button {...btnProps}>点击一下</Button>
+                    <Button { ...addBtnProps}>新增</Button>
+                </div>
                 <Table {...tableProps}/>
             </div>
         )
