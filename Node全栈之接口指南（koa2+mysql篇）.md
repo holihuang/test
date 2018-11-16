@@ -195,8 +195,10 @@
 
 ### 5.5 后端服务
 
-#### 5.5.1 开发流程图
+#### 5.5.1 流程图
 
+
+![demo](https://raw.githubusercontent.com/holihuang/test/database/images/server.png)
 
 
 #### 5.5.2  app.js (入口)
