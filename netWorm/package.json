@@ -1,21 +1,20 @@
 {
-  "name": "netWorm",
+  "name": "node_test",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start_server": "node ./server/app.js",
-    "fetch_data": "node index.js",
-    "start": "npm run fetch_data && npm run start_server"
+    "start_fetch": "node ./index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
     "iconv-lite": "^0.4.24",
     "koa": "next",
+    "koa-bodyparser": "^4.2.1",
     "koa-mysql-session": "^0.0.2",
     "koa-router": "^7.4.0",
-    "koa-session-minimal": "^3.0.4",
-    "koa2-cors": "^2.0.6"
+    "koa-session-minimal": "^3.0.4"
   }
 }
