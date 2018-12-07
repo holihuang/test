@@ -3,8 +3,8 @@
 
 
 "@types/node@*":
-  version "10.12.10"
-  resolved "http://172.16.116.19:7001/@types/node/download/@types/node-10.12.10.tgz#4fa76e6598b7de3f0cb6ec3abacc4f59e5b3a2ce"
+  version "10.12.11"
+  resolved "http://172.16.116.19:7001/@types/node/download/@types/node-10.12.11.tgz#715c476c99a5f6898a1ae61caf9825e43c03912e"
 
 accepts@^1.2.2:
   version "1.3.5"
@@ -32,6 +32,10 @@ boolbase@~1.0.0:
   version "1.0.0"
   resolved "http://172.16.116.19:7001/boolbase/download/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
 
+bytes@3.0.0:
+  version "3.0.0"
+  resolved "http://172.16.116.19:7001/bytes/download/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
+
 cheerio@^1.0.0-rc.2:
   version "1.0.0-rc.2"
   resolved "http://172.16.116.19:7001/cheerio/download/cheerio-1.0.0-rc.2.tgz#4b9f53a81b27e4d5dac31c0ffd0cfa03cc6830db"
@@ -42,6 +46,15 @@ cheerio@^1.0.0-rc.2:
     htmlparser2 "^3.9.1"
     lodash "^4.15.0"
     parse5 "^3.0.1"
+
+co-body@^6.0.0:
+  version "6.0.0"
+  resolved "http://172.16.116.19:7001/co-body/download/co-body-6.0.0.tgz#965b9337d7f5655480787471f4237664820827e3"
+  dependencies:
+    inflation "^2.0.0"
+    qs "^6.5.2"
+    raw-body "^2.3.3"
+    type-is "^1.6.16"
 
 co-mysql@^0.4.1:
   version "0.4.1"
@@ -72,6 +85,10 @@ cookies@~0.6.1:
     depd "~1.1.0"
     keygrip "~1.0.1"
 
+copy-to@^2.0.1:
+  version "2.0.1"
+  resolved "http://172.16.116.19:7001/copy-to/download/copy-to-2.0.1.tgz#2680fbb8068a48d08656b6098092bdafc906f4a5"
+
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "http://172.16.116.19:7001/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -89,23 +106,11 @@ css-what@2.1:
   version "2.1.2"
   resolved "http://172.16.116.19:7001/css-what/download/css-what-2.1.2.tgz#c0876d9d0480927d7d4920dcd72af3595649554d"
 
-debug@*:
-  version "4.1.0"
-  resolved "http://172.16.116.19:7001/debug/download/debug-4.1.0.tgz#373687bffa678b38b1cd91f861b63850035ddc87"
-  dependencies:
-    ms "^2.1.1"
-
-debug@=3.1.0:
+debug@*, debug@=3.1.0, debug@^3.1.0:
   version "3.1.0"
   resolved "http://172.16.116.19:7001/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
     ms "2.0.0"
-
-debug@^3.1.0:
-  version "3.2.6"
-  resolved "http://172.16.116.19:7001/debug/download/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  dependencies:
-    ms "^2.1.1"
 
 deep-equal@^1.0.1, deep-equal@~1.0.1:
   version "1.0.1"
@@ -195,6 +200,15 @@ http-assert@^1.1.0:
     deep-equal "~1.0.1"
     http-errors "~1.7.1"
 
+http-errors@1.6.3:
+  version "1.6.3"
+  resolved "http://172.16.116.19:7001/http-errors/download/http-errors-1.6.3.tgz#8b55680bb4be283a0b5bf4ea2e38580be1d9320d"
+  dependencies:
+    depd "~1.1.2"
+    inherits "2.0.3"
+    setprototypeof "1.1.0"
+    statuses ">= 1.4.0 < 2"
+
 http-errors@^1.2.8, http-errors@^1.3.1, http-errors@~1.7.1:
   version "1.7.1"
   resolved "http://172.16.116.19:7001/http-errors/download/http-errors-1.7.1.tgz#6a4ffe5d35188e1c39f872534690585852e1f027"
@@ -205,11 +219,21 @@ http-errors@^1.2.8, http-errors@^1.3.1, http-errors@~1.7.1:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
+iconv-lite@0.4.23:
+  version "0.4.23"
+  resolved "http://172.16.116.19:7001/iconv-lite/download/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3"
+
 iconv-lite@^0.4.24:
   version "0.4.24"
   resolved "http://172.16.116.19:7001/iconv-lite/download/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
+
+inflation@^2.0.0:
+  version "2.0.0"
+  resolved "http://172.16.116.19:7001/inflation/download/inflation-2.0.0.tgz#8b417e47c28f925a45133d914ca1fd389107f30f"
 
 inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.3:
   version "2.0.3"
@@ -234,6 +258,13 @@ isarray@~1.0.0:
 keygrip@~1.0.1:
   version "1.0.3"
   resolved "http://172.16.116.19:7001/keygrip/download/keygrip-1.0.3.tgz#399d709f0aed2bab0a059e0cdd3a5023a053e1dc"
+
+koa-bodyparser@^4.2.1:
+  version "4.2.1"
+  resolved "http://172.16.116.19:7001/koa-bodyparser/download/koa-bodyparser-4.2.1.tgz#4d7dacb5e6db1106649b595d9e5ccb158b6f3b29"
+  dependencies:
+    co-body "^6.0.0"
+    copy-to "^2.0.1"
 
 koa-compose@^3.0.0:
   version "3.2.1"
@@ -277,10 +308,6 @@ koa-session-minimal@^3.0.4:
     co "^4.6.0"
     deep-equal "^1.0.1"
     uid-safe "^2.1.2"
-
-koa2-cors@^2.0.6:
-  version "2.0.6"
-  resolved "http://172.16.116.19:7001/koa2-cors/download/koa2-cors-2.0.6.tgz#9ad23df3a0b9bb84530b46f5944f3fb576086554"
 
 koa@next:
   version "2.0.0-alpha.8"
@@ -337,10 +364,6 @@ ms@2.0.0:
   version "2.0.0"
   resolved "http://172.16.116.19:7001/ms/download/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-ms@^2.1.1:
-  version "2.1.1"
-  resolved "http://172.16.116.19:7001/ms/download/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
-
 mysql@*:
   version "2.16.0"
   resolved "http://172.16.116.19:7001/mysql/download/mysql-2.16.0.tgz#b23b22ab5de44fc2d5d32bd4f5af6653fc45e2ba"
@@ -390,9 +413,22 @@ process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "http://172.16.116.19:7001/process-nextick-args/download/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
 
+qs@^6.5.2:
+  version "6.6.0"
+  resolved "http://172.16.116.19:7001/qs/download/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
+
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "http://172.16.116.19:7001/random-bytes/download/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
+
+raw-body@^2.3.3:
+  version "2.3.3"
+  resolved "http://172.16.116.19:7001/raw-body/download/raw-body-2.3.3.tgz#1b324ece6b5706e153855bc1148c65bb7f6ea0c3"
+  dependencies:
+    bytes "3.0.0"
+    http-errors "1.6.3"
+    iconv-lite "0.4.23"
+    unpipe "1.0.0"
 
 readable-stream@2.3.6:
   version "2.3.6"
@@ -430,7 +466,7 @@ sqlstring@2.3.1:
   version "2.3.1"
   resolved "http://172.16.116.19:7001/sqlstring/download/sqlstring-2.3.1.tgz#475393ff9e91479aea62dcaf0ca3d14983a7fb40"
 
-"statuses@>= 1.5.0 < 2", statuses@^1.2.0:
+"statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2", statuses@^1.2.0:
   version "1.5.0"
   resolved "http://172.16.116.19:7001/statuses/download/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
 
@@ -444,7 +480,7 @@ toidentifier@1.0.0:
   version "1.0.0"
   resolved "http://172.16.116.19:7001/toidentifier/download/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
 
-type-is@^1.5.5:
+type-is@^1.5.5, type-is@^1.6.16:
   version "1.6.16"
   resolved "http://172.16.116.19:7001/type-is/download/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
   dependencies:
@@ -456,6 +492,10 @@ uid-safe@^2.1.2:
   resolved "http://172.16.116.19:7001/uid-safe/download/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
   dependencies:
     random-bytes "~1.0.0"
+
+unpipe@1.0.0:
+  version "1.0.0"
+  resolved "http://172.16.116.19:7001/unpipe/download/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
 urijs@^1.19.0:
   version "1.19.1"
