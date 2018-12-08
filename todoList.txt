@@ -1,0 +1,9 @@
+
+WeekList
+
+1.在线签到迭代优化（Monday）(done)
+
+2.值班老师开通小组打标签权限（Wednesday）
+
+3.IM接机器人提测中（ing）
+
