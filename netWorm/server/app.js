@@ -4,6 +4,7 @@ const MysqlStore = require('koa-mysql-session')
 
 const config = require('../server.config')
 const routers = require('./routers/index')
+const bodyParser = require('koa-bodyparser')
 
 const app = new Koa()
 
@@ -20,6 +21,9 @@ app.use(session({
     key: 'USER_ID',
     store: new MysqlStore(mysqlSessionCfg)
 }))
+
+// koa默认form转换成json字符串
+app.use(bodyParser())
 
 // 路由
 app.use(routers.routes()).use(routers.allowedMethods())

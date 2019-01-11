@@ -2,9 +2,7 @@ const service = require('./../services/api')
 
 module.exports = {
 	async getInject(ctx) {
-        console.log(ctx, '==================================')
         const formData = ctx.request.body || {}
-        console.log(formData, 'formData')
         const result = {
             success: false,
             message: '',
