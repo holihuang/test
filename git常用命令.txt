@@ -1,0 +1,112 @@
+
+
+本地分支跟踪的远程分支
+
+git branch -vv
+
+branch:
+
+1.列出所有本地分支
+
+git branch
+
+2.列出所有远程分支
+
+git branch -r
+
+3.列出所有branch(本地+远程)
+
+git branch -a
+
+4.新建一个本地分支，不切换当前本地分支
+
+git branch your_branch
+
+5.新建一个本地分支，并切换到该本地分支上
+
+git checkout -b your_branch
+
+6.切换到指定本地分支
+
+git checkout your_branch
+
+7.本地仓库和远程仓库建立关联
+
+git branch --set-upstream-to=origin/remote_branch  your_branch
+
+其中，origin/remote_branch是你本地分支对应的远程分支；your_branch是你当前的本地分支(下同)。
+
+8. git 分支合并到主干
+
+git merge --no-ff your_branch
+
+your_branch 要合并的本地分支, （确保在目标目录下, 目标目录默认为主干）
+
+--no-ff参数： 非快进式合并，git默认的是ff（fast forward：快进式）合并
+
+
+9.重命名本地分支
+
+git branch -m old_branch_name new_branch_name
+
+10.删除本地分支
+
+git branch -d your_branch
+
+11.删除远程分支
+
+git push origin --delete remote_branch
+
+
+分支：本地分支+远程分支
+
+1. 在远程建分支拉到本地
+
+
+git checkout -b your_branch origin/remote_branch
+
+
+2. 在本地建分支推送到远程
+
+git checkout -b your_branch 
+
+git push origin your_branch:remote_branch // 推送本地的your_branch分支到远程origin的remote_branch分支（远程没有会自动创建）
+
+tag:
+
+1.列出所有tag(本地)
+
+git tag
+
+2.创建tag（本地）
+
+git tag -a your_tag -m 'params'
+
+参数'params'字符串是关于your_tag的解释
+
+3.提交指定tag到远程仓库
+
+git push origin your_tag
+
+4.提交所有tag到远程仓库
+
+git push origin --tags
+
+5.删除本地tag
+
+git tag -d your_tag
+
+6.删除远程tag
+
+git push origin :refs/tags/remote_tag
+
+注意：':'前面有空格
+
+
+撤销/回滚
+
+git checkout . // 未执行add(wroking tree 内撤销)
+
+git reset HEAD // 执行add后（暂存区撤销）
+
+git reset --hard commitId // 执行commit后 (commit撤销)
